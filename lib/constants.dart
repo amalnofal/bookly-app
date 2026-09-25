@@ -9,3 +9,4 @@ const kAccentColor = Color(0xFF6C5CE7);
 const kTranstionDuration = Duration(milliseconds: 250);
 const kSurfaceColor = Color(0xFF1A1A2B);
 const kIconColor = Color(0xFF8A8AA0);
+const kRatingColor = Color(0xFFF4C842);

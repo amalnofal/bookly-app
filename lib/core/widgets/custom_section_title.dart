@@ -9,7 +9,7 @@ class CustomSectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.only(start: 24, top: 12, bottom: 12),
-      child: Text(title, style: Styles.sectionTitle),
+      child: Text(title, style: Styles.headingStyle),
     );
   }
 }
