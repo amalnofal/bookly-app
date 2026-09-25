@@ -92,11 +92,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
                   SvgPicture.asset(AssetsData.logo, height: 59, width: 72),
                   const SizedBox(height: 16),
                   const Text(
-                    "BOOKLY",
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'DM Serif Display',
-                    ),
+                    kAppName,
+                    style: TextStyle(fontSize: 36, fontFamily: kSecondaryFont),
                   ),
                   const SizedBox(height: 8),
                   const Text(
@@ -104,7 +101,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
                     style: TextStyle(
                       fontSize: 16,
                       color: kSubTitleColor,
-                      fontFamily: 'DM Sans',
                       fontWeight: FontWeight.bold,
                     ),
                   ),

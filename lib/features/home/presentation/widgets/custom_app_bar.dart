@@ -1,3 +1,4 @@
+import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/widgets/custom_circle_button.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,8 @@ class CustomAppBar extends StatelessWidget {
           SvgPicture.asset(AssetsData.logo, height: 38),
           const SizedBox(width: 8),
           const Text(
-            "BOOKLY",
-            style: TextStyle(fontSize: 28, fontFamily: 'DM Serif Display'),
+            kAppName,
+            style: TextStyle(fontSize: 28, fontFamily: kSecondaryFont),
           ),
           const Spacer(),
           CustomCircleButton(icon: AssetsData.search, onPressed: () {}),
