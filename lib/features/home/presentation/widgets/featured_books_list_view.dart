@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -16,7 +18,12 @@ class FeaturedBooksListView extends StatelessWidget {
         },
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return const CustomBookImage();
+          return GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kBookDetailsView);
+            },
+            child: const CustomBookImage(),
+          );
         },
       ),
     );

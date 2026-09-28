@@ -10,13 +10,13 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(14),
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.all(14),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: kSurfaceColor,
       ),
-      child: SizedBox(
+      child: const SizedBox(
         height: 85,
         child: Row(
           children: [
