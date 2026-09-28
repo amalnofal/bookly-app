@@ -17,11 +17,10 @@ class CustomCircleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: kSurfaceColor,
-        shape: BoxShape.circle,
-      ),
+    return Material(
+      color: kSurfaceColor,
+      shape: const CircleBorder(),
+      clipBehavior: Clip.hardEdge,
       child: InkWell(
         onTap: onPressed,
         child: Padding(

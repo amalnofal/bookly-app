@@ -20,7 +20,7 @@ abstract class Styles {
 
   static const badgeStyle = TextStyle(
     fontSize: 12,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     color: kAccentColor,
   );
 }

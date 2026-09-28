@@ -18,7 +18,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           const Spacer(),
           const Text(
             "Book Details",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
           const Spacer(),
           CustomCircleButton(icon: Icons.favorite_outline, onPressed: () {}),
