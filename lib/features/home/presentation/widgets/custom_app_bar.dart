@@ -1,7 +1,7 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/widgets/custom_circle_button.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
             style: TextStyle(fontSize: 28, fontFamily: kSecondaryFont),
           ),
           const Spacer(),
-          CustomCircleButton(icon: AssetsData.search, onPressed: () {}),
+          CustomCircleButton(icon: CupertinoIcons.search, onPressed: () {}),
         ],
       ),
     );
