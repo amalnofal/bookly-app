@@ -2,8 +2,8 @@ import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class BookDetailsColumn extends StatelessWidget {
-  const BookDetailsColumn({super.key});
+class BookSummaryColumn extends StatelessWidget {
+  const BookSummaryColumn({super.key});
 
   @override
   Widget build(BuildContext context) {

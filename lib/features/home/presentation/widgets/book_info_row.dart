@@ -6,23 +6,20 @@ class BookInfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: InfoBoxItem(title: 'Pages', value: '304'),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: InfoBoxItem(title: 'Language', value: 'EN'),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: InfoBoxItem(title: 'Published', value: '2022'),
-                        ),
-                      ],
-                    ),
-                  );
+    return Row(
+      children: [
+        Expanded(
+          child: InfoBoxItem(title: 'Pages', value: '304'),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: InfoBoxItem(title: 'Language', value: 'EN'),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: InfoBoxItem(title: 'Published', value: '2022'),
+        ),
+      ],
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/widgets/custom_badge.dart';
-import 'package:bookly_app/features/home/presentation/widgets/book_details_column.dart';
+import 'package:bookly_app/features/home/presentation/widgets/book_summary_column.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +22,7 @@ class BestSellerListViewItem extends StatelessWidget {
           children: [
             CustomBookImage(borderRadius: 8),
             SizedBox(width: 12),
-            Expanded(child: BookDetailsColumn()),
+            Expanded(child: BookSummaryColumn()),
 
             CustomBadge(text: "€19.99"),
           ],
