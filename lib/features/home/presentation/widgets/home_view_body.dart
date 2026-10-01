@@ -17,12 +17,11 @@ class HomeViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomAppBar(),
-
-                CustomSectionTitle(title: 'Featured'),
+                CustomSectionTitle(title: "Featured"),
                 FeaturedBooksListView(),
                 SizedBox(height: 16),
 
-                CustomSectionTitle(title: 'Best Sellers'),
+                CustomSectionTitle(title: "Best Sellers"),
               ],
             ),
           ),

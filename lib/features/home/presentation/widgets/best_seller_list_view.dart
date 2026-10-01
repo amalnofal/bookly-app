@@ -8,17 +8,20 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverList.separated(
-      separatorBuilder: (context, index) => const SizedBox(height: 10),
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            GoRouter.of(context).push(AppRouter.kBookDetailsView);
-          },
-          child: const BestSellerListViewItem(),
-        );
-      },
+    return SliverPadding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      sliver: SliverList.separated(
+        separatorBuilder: (context, index) => const SizedBox(height: 10),
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kBookDetailsView);
+            },
+            child: const BestSellerListViewItem(),
+          );
+        },
+      ),
     );
   }
 }

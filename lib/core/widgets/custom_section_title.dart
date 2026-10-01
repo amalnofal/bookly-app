@@ -8,7 +8,7 @@ class CustomSectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(start: 24, top: 12, bottom: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Text(title, style: Styles.headingStyle),
     );
   }

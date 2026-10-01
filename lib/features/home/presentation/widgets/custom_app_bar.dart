@@ -1,8 +1,10 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/widgets/custom_circle_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -20,7 +22,12 @@ class CustomAppBar extends StatelessWidget {
             style: TextStyle(fontSize: 28, fontFamily: kSecondaryFont),
           ),
           const Spacer(),
-          CustomCircleButton(icon: CupertinoIcons.search, onPressed: () {}),
+          CustomCircleButton(
+            icon: CupertinoIcons.search,
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kSearchView);
+            },
+          ),
         ],
       ),
     );

@@ -6,11 +6,7 @@ class InfoBoxItem extends StatelessWidget {
   final String title;
   final String value;
 
-  const InfoBoxItem({
-    super.key,
-    required this.title,
-    required this.value,
-  });
+  const InfoBoxItem({super.key, required this.title, required this.value});
 
   @override
   Widget build(BuildContext context) {
