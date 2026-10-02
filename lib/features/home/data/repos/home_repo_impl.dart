@@ -13,15 +13,38 @@ class HomeRepoImpl implements HomeRepo {
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
+    return await _fetchBooks(
+      endPoint: "volumes",
+      queryParameters: {
+        'key': booksApiKey,
+        'filter': 'free-ebooks',
+        'q': 'subject: Programming',
+        'orderBy': 'newest',
+      },
+    );
+  }
+
+  @override
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
+    return await _fetchBooks(
+      endPoint: "volumes",
+      queryParameters: {
+        'key': booksApiKey,
+        'filter': 'free-ebooks',
+        'q': 'subject: Programming',
+      },
+    );
+  }
+
+  // Helper method
+  Future<Either<Failure, List<BookModel>>> _fetchBooks({
+    required String endPoint,
+    required Map<String, dynamic> queryParameters,
+  }) async {
     try {
       var data = await apiService.get(
-        endPoint: "volumes",
-        queryParameters: {
-          'key': booksApiKey,
-          'filter': 'free-ebooks',
-          'q': 'subject: Programming',
-          'orderBy': 'newest',
-        },
+        endPoint: endPoint,
+        queryParameters: queryParameters,
       );
 
       List<BookModel> books = [];
@@ -35,14 +58,7 @@ class HomeRepoImpl implements HomeRepo {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
       }
-
       return left(ServerFailure(e.toString()));
     }
-  }
-
-  @override
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
   }
 }
