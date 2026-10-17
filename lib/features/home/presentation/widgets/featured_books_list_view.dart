@@ -19,7 +19,7 @@ class FeaturedBooksListView extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.25,
             child: ListView.separated(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              itemCount: 10,
+              itemCount: state.books.length,
               separatorBuilder: (context, index) {
                 return const SizedBox(width: 16);
               },
@@ -29,7 +29,10 @@ class FeaturedBooksListView extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).push(AppRouter.kBookDetailsView);
                   },
-                  child: const CustomBookImage(),
+                  child: CustomBookImage(
+                    imageUrl:
+                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                  ),
                 );
               },
             ),

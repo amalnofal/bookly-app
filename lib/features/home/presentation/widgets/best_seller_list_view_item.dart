@@ -19,7 +19,10 @@ class BestSellerListViewItem extends StatelessWidget {
         height: 85,
         child: Row(
           children: [
-            CustomBookImage(borderRadius: 8),
+            CustomBookImage(
+              imageUrl: "https://picsum.photos/200/300",
+              borderRadius: 8,
+            ),
             SizedBox(width: 12),
             Expanded(child: BookSummaryColumn()),
 

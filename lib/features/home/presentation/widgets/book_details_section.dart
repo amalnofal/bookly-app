@@ -31,7 +31,7 @@ class BookDetailsSection extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const CustomBookImage(),
+              child: const CustomBookImage(imageUrl: "https://picsum.photos/200/300"),
             ),
           ),
           const SizedBox(height: 16),

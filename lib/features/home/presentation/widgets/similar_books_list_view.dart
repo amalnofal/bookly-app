@@ -14,7 +14,10 @@ class SimilarBooksListView extends StatelessWidget {
         itemCount: 10,
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemBuilder: (context, index) {
-          return const CustomBookImage(borderRadius: 8);
+          return const CustomBookImage(
+            imageUrl: "https://picsum.photos/200/300",
+            borderRadius: 8,
+          );
         },
       ),
     );
