@@ -18,7 +18,7 @@ class HomeRepoImpl implements HomeRepo {
       queryParameters: {
         'key': booksApiKey,
         'filter': 'free-ebooks',
-        'q': 'subject: Programming',
+        'q': 'subject: Fiction',
         'orderBy': 'newest',
       },
     );
@@ -31,7 +31,7 @@ class HomeRepoImpl implements HomeRepo {
       queryParameters: {
         'key': booksApiKey,
         'filter': 'free-ebooks',
-        'q': 'subject: Programming',
+        'q': 'subject: Fiction',
       },
     );
   }

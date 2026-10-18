@@ -1,11 +1,13 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/widgets/custom_badge.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/widgets/book_summary_column.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookListItem extends StatelessWidget {
+  const BookListItem({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +17,17 @@ class BestSellerListViewItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: kSurfaceColor,
       ),
-      child: const SizedBox(
-        height: 85,
+      child: SizedBox(
+        height: 95,
         child: Row(
           children: [
             CustomBookImage(
-              imageUrl: "https://picsum.photos/200/300",
+              imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
               borderRadius: 8,
             ),
-            SizedBox(width: 12),
-            Expanded(child: BookSummaryColumn()),
-
-            CustomBadge(text: "€19.99"),
+            const SizedBox(width: 12),
+            Expanded(child: BookSummaryColumn(bookModel: bookModel)),
+            const CustomBadge(text: "Free"),
           ],
         ),
       ),

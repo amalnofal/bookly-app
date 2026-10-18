@@ -1,24 +1,30 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookSummaryColumn extends StatelessWidget {
-  const BookSummaryColumn({super.key});
+  const BookSummaryColumn({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
-          "The Midnight Library",
+          bookModel.volumeInfo.title!,
           style: Styles.titleStyle,
-          maxLines: 1,
+          maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
-        Text("Matt Haig", style: Styles.captionStyle),
-
+        const SizedBox(height: 8),
+        Text(
+          bookModel.volumeInfo.authors?[0] ?? "",
+          style: Styles.captionStyle,
+          maxLines: 1,
+        ),
+        const SizedBox(height: 8),
         Row(
           children: [
             const Icon(Icons.star, color: kRatingColor, size: 12),
