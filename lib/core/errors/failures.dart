@@ -53,12 +53,16 @@ class ServerFailure extends Failure {
       );
     } else if (statusCode == 404) {
       return ServerFailure(
-        'Your request was not found, Please try again later!',
+        'Your request was not found\n, Please try again later!',
       );
     } else if (statusCode == 500) {
-      return ServerFailure('Internal Server Error, Please try again later');
+      return ServerFailure('Internal Server Error,\n Please try again later');
+    } else if (statusCode == 503) {
+      return ServerFailure(
+        'Service temporarily unavailable,\n Please try again later!',
+      );
     } else {
-      return ServerFailure('Opps There was an Error, Please try again');
+      return ServerFailure('Opps There was an Error,\n Please try again later!');
     }
   }
 }
