@@ -18,11 +18,11 @@ class BookDetailsRating extends StatelessWidget {
         children: [
           const Icon(Icons.star, color: kRatingColor, size: 14),
           const SizedBox(width: 5),
-          const Text('4.8', style: Styles.titleStyle),
+          const Text('0', style: Styles.titleStyle),
 
           const SizedBox(width: 6),
           Text(
-            '· 12,400 reviews',
+            '(0 reviews)',
             style: Styles.captionStyle.copyWith(fontSize: 11),
           ),
         ],

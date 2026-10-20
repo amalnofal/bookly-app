@@ -18,7 +18,7 @@ class HomeRepoImpl implements HomeRepo {
       queryParameters: {
         'key': booksApiKey,
         'filter': 'free-ebooks',
-        'q': 'subject: Fiction',
+        'q': 'subject: Programming',
         'orderBy': 'newest',
       },
     );
@@ -31,21 +31,21 @@ class HomeRepoImpl implements HomeRepo {
       queryParameters: {
         'key': booksApiKey,
         'filter': 'free-ebooks',
-        'q': 'subject: Fiction',
+        'q': 'subject: Programming',
       },
     );
   }
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchSimilarBooks({
-    required String caregory,
+    required String category,
   }) async {
     return await _fetchBooks(
       endPoint: "volumes",
       queryParameters: {
         'key': booksApiKey,
         'filter': 'free-ebooks',
-        'q': 'subject: $caregory',
+        'q': 'subject: $category',
         'orderBy': 'relevance',
       },
     );

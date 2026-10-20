@@ -12,7 +12,7 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
 
   Future<void> fetchSimilarBooks({required String category}) async {
     emit(SimilarBooksLoading());
-    var results = await homeRepo.fetchSimilarBooks(caregory: category);
+    var results = await homeRepo.fetchSimilarBooks(category: category);
 
     results.fold(
       (failure) => emit(SimilarBooksFailure(failure.errMessage)),

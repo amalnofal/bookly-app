@@ -30,7 +30,7 @@ class BookSummaryColumn extends StatelessWidget {
             const Icon(Icons.star, color: kRatingColor, size: 12),
             const SizedBox(width: 3),
             const Text(
-              '4.8',
+              '0',
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
@@ -38,7 +38,7 @@ class BookSummaryColumn extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 5),
-            Text('(12.4k)', style: Styles.captionStyle),
+            Text('(0)', style: Styles.captionStyle),
           ],
         ),
       ],
