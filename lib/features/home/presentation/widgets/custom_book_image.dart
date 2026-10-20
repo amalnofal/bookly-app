@@ -19,13 +19,14 @@ class CustomBookImage extends StatelessWidget {
       borderRadius: BorderRadius.circular(borderRadius),
       child: AspectRatio(
         aspectRatio: aspectRatio,
-        child: CachedNetworkImage(
-          imageUrl: imageUrl,
-          fit: BoxFit.fill,
-          errorWidget: (context, url, error) =>
-              const Icon(Icons.broken_image_outlined),
-          // placeholder: (context, url) => const CustomLoadingIndicator(),
-        ),
+        child: imageUrl.isEmpty
+            ? const Icon(Icons.book_outlined)
+            : CachedNetworkImage(
+                imageUrl: imageUrl,
+                fit: BoxFit.fill,
+                errorWidget: (context, url, error) =>
+                    const Icon(Icons.broken_image_outlined),
+              ),
       ),
     );
   }

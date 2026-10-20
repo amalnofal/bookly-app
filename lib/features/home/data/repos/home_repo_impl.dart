@@ -36,6 +36,21 @@ class HomeRepoImpl implements HomeRepo {
     );
   }
 
+  @override
+  Future<Either<Failure, List<BookModel>>> fetchSimilarBooks({
+    required String caregory,
+  }) async {
+    return await _fetchBooks(
+      endPoint: "volumes",
+      queryParameters: {
+        'key': booksApiKey,
+        'filter': 'free-ebooks',
+        'q': 'subject: $caregory',
+        'orderBy': 'relevance',
+      },
+    );
+  }
+
   // Helper method
   Future<Either<Failure, List<BookModel>>> _fetchBooks({
     required String endPoint,
