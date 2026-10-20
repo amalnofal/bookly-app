@@ -1,4 +1,5 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/functions/launch_url.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/core/widgets/custom_badge.dart';
 import 'package:bookly_app/core/widgets/custom_button.dart';
@@ -62,7 +63,12 @@ class BookDetailsSection extends StatelessWidget {
           BookInfoRow(bookModel: bookModel),
 
           const SizedBox(height: 16),
-          CustomButton(onPressed: () {}, text: "Read for free"),
+          CustomButton(
+            onPressed: () async {
+              launchBookPreview(context, bookModel.volumeInfo.previewLink!);
+            },
+            text: "Read for free",
+          ),
         ],
       ),
     );

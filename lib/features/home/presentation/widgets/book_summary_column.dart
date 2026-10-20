@@ -20,7 +20,7 @@ class BookSummaryColumn extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          bookModel.volumeInfo.authors?[0] ?? "",
+          bookModel.volumeInfo.authors?[0] ?? 'Unknown author',
           style: Styles.captionStyle,
           maxLines: 1,
         ),
