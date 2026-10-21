@@ -23,4 +23,9 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: kAccentColor,
   );
+
+  static const messageStyle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
 }

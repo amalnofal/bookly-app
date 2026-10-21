@@ -12,18 +12,12 @@ class SimilarBooksSection extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'You may also like',
-                style: Styles.headingStyle.copyWith(fontSize: 16),
-              ),
-
-              Text('See all', style: Styles.badgeStyle),
-            ],
+          child: Text(
+            'You may also like',
+            style: Styles.headingStyle.copyWith(fontSize: 16),
           ),
         ),
+
         SizedBox(height: 8),
         const SimilarBooksListView(),
       ],

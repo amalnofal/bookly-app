@@ -41,7 +41,7 @@ class BookDetailsSection extends StatelessWidget {
           ),
           const SizedBox(height: 16),
 
-          const CustomBadge(text: "Programming"),
+          CustomBadge(text: bookModel.volumeInfo.categories![0]),
           const SizedBox(height: 8),
 
           Text(
